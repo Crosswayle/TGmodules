@@ -25,7 +25,6 @@ async def _(event):
             await event.edit("```Ты на текст должен ответить, диб*ил```")
             return
     chat = "@aleksobot"
-    await event.edit("```Происходит магия Деменкопа```")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=616484527))
